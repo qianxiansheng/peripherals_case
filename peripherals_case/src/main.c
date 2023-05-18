@@ -388,29 +388,57 @@ void adc_test()
 /* 
  * (1) normal SPI. TODO
  * (2) SPI DMA.
- * (3) high speed SPI. TODO
+ * (3) high speed SPI (clock frequnce > 20Mbps).
  * 
  */
+ 
+#define HIGH_SPEED
+#define USE_SPI0
 
-#define DATA_LEN_CNT_MAX_FOR_SPI (512)
+#ifdef USE_SPI0
+
+//SYSCTRL_CLK_PLL_DIV_4 means 336M / 4 = 84M
+//"eSclkDiv == 1"       means 84M/(2*(1+1)) = 21M(spi clk speed)
+#define SPI_INTERFACETIMINGSCLKDIV_SPI1_21M    (1)
+
+
+#define SSP_Ptr             AHB_SSP0
+#define SPI_DMA_DST         SYSCTRL_DMA_SPI0_TX
+
+#define SPI_MIC_CLK         GIO_GPIO_19
+#define SPI_MIC_CS          GIO_GPIO_18
+#define SPI_MIC_MISO        GIO_GPIO_27
+#define SPI_MIC_MOSI        GIO_GPIO_28
+#define SPI_MIC_HOLD        IO_NOT_A_PIN    //HS: IO20
+#define SPI_MIC_WP          IO_NOT_A_PIN    //HS: IO26
+
+#else
+
+#define SSP_Ptr             AHB_SSP1
+#define SPI_DMA_DST         SYSCTRL_DMA_SPI1_TX
 
 #define SPI_MIC_CLK         GIO_GPIO_3
 #define SPI_MIC_CS          GIO_GPIO_4
 #define SPI_MIC_MISO        GIO_GPIO_5
 #define SPI_MIC_MOSI        GIO_GPIO_6
-#define SPI_MIC_HOLD        IO_NOT_A_PIN
-#define SPI_MIC_WP          IO_NOT_A_PIN
+#define SPI_MIC_HOLD        IO_NOT_A_PIN 
+#define SPI_MIC_WP          IO_NOT_A_PIN 
+
+
+#endif
+
+#define DATA_LEN_CNT_MAX_FOR_SPI (512)
 
 #define SPI_DMA_TX_CHANNEL (0)
 
 
 void spi_set_data_size(uint8_t dataSize)
 {
-    apSSP_SetTransferFormat(APB_SSP1, (dataSize - 1), bsSPI_TRANSFMT_DATALEN, bwSPI_TRANSFMT_DATALEN);
+    apSSP_SetTransferFormat(SSP_Ptr, (dataSize - 1), bsSPI_TRANSFMT_DATALEN, bwSPI_TRANSFMT_DATALEN);
 }
 void spi_set_trans_cnt(uint32_t transCnt)
 {
-    apSSP_SetTransferControlWrTranCnt(APB_SSP1, transCnt);
+    apSSP_SetTransferControlWrTranCnt(SSP_Ptr, transCnt);
 }
 
 typedef struct 
@@ -423,28 +451,28 @@ spi_dma_tx_t spi_dma_context = {.sem_over = NULL,.data_cnt = 0};
 
 static uint32_t peripherals_spi_isr(void* user_data)
 {
-    uint32_t stat = apSSP_GetIntRawStatus(APB_SSP1);
+    uint32_t stat = apSSP_GetIntRawStatus(SSP_Ptr);
     
     if (stat & (1 << bsSPI_INTREN_ENDINTEN))
     {
-        apSSP_ClearIntStatus(APB_SSP1, 1 << bsSPI_INTREN_ENDINTEN);
+        apSSP_ClearIntStatus(SSP_Ptr, 1 << bsSPI_INTREN_ENDINTEN);
         
         if (spi_dma_context.data_cnt > DATA_LEN_CNT_MAX_FOR_SPI)
         {
             spi_dma_context.data_cnt -= DATA_LEN_CNT_MAX_FOR_SPI;
-            apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   // trigger transfer
+            apSSP_WriteCmd(SSP_Ptr, 0x00, 0x00);   // trigger transfer
         }
         else if (spi_dma_context.data_cnt > 0)      // last package
         {
             spi_set_trans_cnt(spi_dma_context.data_cnt);
             spi_dma_context.data_cnt = 0;
             
-            apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   // trigger transfer
+            apSSP_WriteCmd(SSP_Ptr, 0x00, 0x00);   // trigger transfer
         }
         else                                        // transfer all over
         {
-            apSSP_ResetTxFifo(APB_SSP1);
-            apSSP_SetTxDmaEn(APB_SSP1,0);
+            apSSP_ResetTxFifo(SSP_Ptr);
+            apSSP_SetTxDmaEn(SSP_Ptr,0);
             
             BaseType_t xHigherPriorityTaskWoke = pdFALSE;
             xSemaphoreGiveFromISR(spi_dma_context.sem_over, &xHigherPriorityTaskWoke);
@@ -454,15 +482,35 @@ static uint32_t peripherals_spi_isr(void* user_data)
 }
 void spi_config()
 {
+#ifdef USE_SPI0
+    
+    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_AHB_SPI0));
+    
+    #ifdef HIGH_SPEED
+    SYSCTRL_SelectSpiClk(SPI_PORT_0, SYSCTRL_CLK_PLL_DIV_4);  //PPL 336M / 4 = 84M
+    #endif
+    
+    PINCTRL_SelSpiIn(SPI_PORT_0, SPI_MIC_CLK, SPI_MIC_CS, SPI_MIC_HOLD, SPI_MIC_WP, SPI_MIC_MISO, SPI_MIC_MOSI);
+    PINCTRL_SetPadMux(SPI_MIC_CLK, IO_SOURCE_SPI0_CLK_OUT);
+    PINCTRL_SetPadMux(SPI_MIC_CS, IO_SOURCE_SPI0_CSN_OUT);
+    PINCTRL_SetPadMux(SPI_MIC_MOSI, IO_SOURCE_SPI0_MOSI_OUT);
+    platform_set_irq_callback(PLATFORM_CB_IRQ_AHPSPI, peripherals_spi_isr, NULL);
+#else
+    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SPI1);
+    
     PINCTRL_SelSpiIn(SPI_PORT_1, SPI_MIC_CLK, SPI_MIC_CS, SPI_MIC_HOLD, SPI_MIC_WP, SPI_MIC_MISO, SPI_MIC_MOSI);
     PINCTRL_SetPadMux(SPI_MIC_CLK, IO_SOURCE_SPI1_CLK_OUT);
     PINCTRL_SetPadMux(SPI_MIC_CS, IO_SOURCE_SPI1_CSN_OUT);
     PINCTRL_SetPadMux(SPI_MIC_MOSI, IO_SOURCE_SPI1_MOSI_OUT);
-    
     platform_set_irq_callback(PLATFORM_CB_IRQ_APBSPI, peripherals_spi_isr, NULL);
+#endif
     
     apSSP_sDeviceControlBlock param;
+#ifdef HIGH_SPEED
+    param.eSclkDiv         = (  SPI_InterfaceTimingSclkDiv )SPI_INTERFACETIMINGSCLKDIV_SPI1_21M;    //"eSclkDiv == 1" means 84M/(2*(1+1)) = 21M(spi clk speed)
+#else
     param.eSclkDiv         = (  SPI_InterfaceTimingSclkDiv )SPI_INTERFACETIMINGSCLKDIV_DEFAULT_2M;
+#endif
     param.eSCLKPhase       = (  SPI_TransFmt_CPHA_e        )SPI_CPHA_ODD_SCLK_EDGES;
     param.eSCLKPolarity    = (  SPI_TransFmt_CPOL_e        )SPI_CPOL_SCLK_LOW_IN_IDLE_STATES;
     param.eLsbMsbOrder     = (  SPI_TransFmt_LSB_e         )SPI_LSB_MOST_SIGNIFICANT_BIT_FIRST;
@@ -480,7 +528,7 @@ void spi_config()
     param.SlaveDataOnly    = (  SPI_TransCtrl_SlvDataOnly_e)SPI_SLVDATAONLY_ENABLE;
     param.eAddrLen         = (  SPI_TransFmt_AddrLen_e     )SPI_ADDRLEN_1_BYTE;
     
-    apSSP_DeviceParametersSet(APB_SSP1, &param);
+    apSSP_DeviceParametersSet(SSP_Ptr, &param);
 }
 
 void dma_config()
@@ -492,8 +540,7 @@ void dma_config()
 
 void spi_test_init()
 {
-    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SPI1)
-                             |(1 << SYSCTRL_ITEM_APB_SysCtrl)
+    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SysCtrl)
                              |(1 << SYSCTRL_ITEM_APB_PinCtrl));
     
     spi_config();
@@ -506,17 +553,17 @@ void peripherals_spi_dma_to_txfifo(int channel_id, void *src, int size)
 {
     DMA_Descriptor descriptor __attribute__((aligned (8)));
     descriptor.Next = NULL;
-    DMA_PrepareMem2Peripheral(&descriptor, SYSCTRL_DMA_SPI1_TX, src, size, DMA_ADDRESS_INC, 0);
+    DMA_PrepareMem2Peripheral(&descriptor, SPI_DMA_DST, src, size, DMA_ADDRESS_INC, 0);
 
     DMA_EnableChannel(channel_id, &descriptor);
 }
 
 void peripherals_spi_send_data(uint8_t *data, int size)
 {
-    apSSP_SetTxDmaEn(APB_SSP1,1);
+    apSSP_SetTxDmaEn(SSP_Ptr,1);
     peripherals_spi_dma_to_txfifo(SPI_DMA_TX_CHANNEL, data, size);
 
-    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   //trigger transfer
+    apSSP_WriteCmd(SSP_Ptr, 0x00, 0x00);   //trigger transfer
 }
 
 /*************************************************************
@@ -554,8 +601,16 @@ void spi_test_timer_task(TimerHandle_t xTimer)
         data[i] = i;
     
     spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
+    
+    platform_printf("step1.\n");
+    
     spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
+    
+    platform_printf("step2.\n");
+    
     spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
+    
+    platform_printf("step3.\n");
 }
 
 void spi_test()
