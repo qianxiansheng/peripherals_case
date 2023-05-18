@@ -414,7 +414,7 @@ void adc_test()
 
 #else
 
-#define SSP_Ptr             AHB_SSP1
+#define SSP_Ptr             APB_SSP1
 #define SPI_DMA_DST         SYSCTRL_DMA_SPI1_TX
 
 #define SPI_MIC_CLK         GIO_GPIO_3
@@ -496,7 +496,7 @@ void spi_config()
     PINCTRL_SetPadMux(SPI_MIC_MOSI, IO_SOURCE_SPI0_MOSI_OUT);
     platform_set_irq_callback(PLATFORM_CB_IRQ_AHPSPI, peripherals_spi_isr, NULL);
 #else
-    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SPI1);
+    SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SPI1));
     
     PINCTRL_SelSpiIn(SPI_PORT_1, SPI_MIC_CLK, SPI_MIC_CS, SPI_MIC_HOLD, SPI_MIC_WP, SPI_MIC_MISO, SPI_MIC_MOSI);
     PINCTRL_SetPadMux(SPI_MIC_CLK, IO_SOURCE_SPI1_CLK_OUT);
