@@ -7,6 +7,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timers.h"
+#include "semphr.h"
 
 #include "eflash.h"
 #include "iic.h"
@@ -52,10 +53,10 @@ void config_uart(uint32_t freq, uint32_t baud)
 //#define CASE_PWM
 //#define CASE_EFLASH
 //#define CASE_ADC
-//#define CASE_SPI
+#define CASE_SPI
 //#define CASE_RTC
 //#define CASE_TIMER
-#define CASE_WDT
+//#define CASE_WDT
 //#define CASE_I2C
 
 // GPIO
@@ -384,11 +385,14 @@ void adc_test()
 // SPI
 #ifdef CASE_SPI
 
-#define DATA_LEN            (SPI_FIFO_DEPTH)
+/* 
+ * (1) normal SPI. TODO
+ * (2) SPI DMA.
+ * (3) high speed SPI. TODO
+ * 
+ */
 
-//#define CASE_SPI_NORMAL_MASTER
-
-#define CASE_SPI_SEND_USE_DMA
+#define DATA_LEN_CNT_MAX_FOR_SPI (512)
 
 #define SPI_MIC_CLK         GIO_GPIO_3
 #define SPI_MIC_CS          GIO_GPIO_4
@@ -399,7 +403,24 @@ void adc_test()
 
 #define SPI_DMA_TX_CHANNEL (0)
 
-#ifdef CASE_SPI_NORMAL_MASTER
+
+void spi_set_data_size(uint8_t dataSize)
+{
+    apSSP_SetTransferFormat(APB_SSP1, (dataSize - 1), bsSPI_TRANSFMT_DATALEN, bwSPI_TRANSFMT_DATALEN);
+}
+void spi_set_trans_cnt(uint32_t transCnt)
+{
+    apSSP_SetTransferControlWrTranCnt(APB_SSP1, transCnt);
+}
+
+typedef struct 
+{
+    SemaphoreHandle_t sem_over;
+    uint32_t data_cnt;
+} spi_dma_tx_t;
+
+spi_dma_tx_t spi_dma_context = {.sem_over = NULL,.data_cnt = 0};
+
 static uint32_t peripherals_spi_isr(void* user_data)
 {
     uint32_t stat = apSSP_GetIntRawStatus(APB_SSP1);
@@ -407,30 +428,30 @@ static uint32_t peripherals_spi_isr(void* user_data)
     if (stat & (1 << bsSPI_INTREN_ENDINTEN))
     {
         apSSP_ClearIntStatus(APB_SSP1, 1 << bsSPI_INTREN_ENDINTEN);
-    }
-    return 0;
-}
-#else
-static uint32_t peripherals_spi_isr(void* user_data)
-{
-    uint32_t stat = apSSP_GetIntRawStatus(APB_SSP1), i, c;
-    
-    if (stat & (1 << bsSPI_INTREN_ENDINTEN))
-    {
-        uint32_t num = apSSP_GetDataNumInRxFifo(APB_SSP1);
-        for(i = 0; i < num; i++)
+        
+        if (spi_dma_context.data_cnt > DATA_LEN_CNT_MAX_FOR_SPI)
         {
-            apSSP_ReadFIFO(APB_SSP1, &c);
-            
-            platform_printf("%08X ", c);
+            spi_dma_context.data_cnt -= DATA_LEN_CNT_MAX_FOR_SPI;
+            apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   // trigger transfer
         }
-        platform_printf("\r\n");
-        apSSP_ClearIntStatus(APB_SSP1, 1 << bsSPI_INTREN_ENDINTEN);
+        else if (spi_dma_context.data_cnt > 0)      // last package
+        {
+            spi_set_trans_cnt(spi_dma_context.data_cnt);
+            spi_dma_context.data_cnt = 0;
+            
+            apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   // trigger transfer
+        }
+        else                                        // transfer all over
+        {
+            apSSP_ResetTxFifo(APB_SSP1);
+            apSSP_SetTxDmaEn(APB_SSP1,0);
+            
+            BaseType_t xHigherPriorityTaskWoke = pdFALSE;
+            xSemaphoreGiveFromISR(spi_dma_context.sem_over, &xHigherPriorityTaskWoke);
+        }
     }
     return 0;
 }
-#endif
-
 void spi_config()
 {
     PINCTRL_SelSpiIn(SPI_PORT_1, SPI_MIC_CLK, SPI_MIC_CS, SPI_MIC_HOLD, SPI_MIC_WP, SPI_MIC_MISO, SPI_MIC_MOSI);
@@ -446,11 +467,7 @@ void spi_config()
     param.eSCLKPolarity    = (  SPI_TransFmt_CPOL_e        )SPI_CPOL_SCLK_LOW_IN_IDLE_STATES;
     param.eLsbMsbOrder     = (  SPI_TransFmt_LSB_e         )SPI_LSB_MOST_SIGNIFICANT_BIT_FIRST;
     param.eDataSize        = (  SPI_TransFmt_DataLen_e     )SPI_DATALEN_8_BITS;
-#ifdef CASE_SPI_NORMAL_MASTER
     param.eMasterSlaveMode = (  SPI_TransFmt_SlvMode_e     )SPI_SLVMODE_MASTER_MODE;
-#else
-    param.eMasterSlaveMode = (  SPI_TransFmt_SlvMode_e     )SPI_SLVMODE_SLAVE_MODE;
-#endif
     param.eReadWriteMode   = (  SPI_TransCtrl_TransMode_e  )SPI_TRANSMODE_WRITE_ONLY;
     param.eQuadMode        = (  SPI_TransCtrl_DualQuad_e   )SPI_DUALQUAD_REGULAR_MODE;
     param.eWriteTransCnt   = (  SPI_TransCtrl_TransCnt     )1;
@@ -466,6 +483,13 @@ void spi_config()
     apSSP_DeviceParametersSet(APB_SSP1, &param);
 }
 
+void dma_config()
+{
+    SYSCTRL_ClearClkGateMulti(1 << SYSCTRL_ClkGate_APB_DMA);
+    DMA_Reset(1);
+    DMA_Reset(0);
+}
+
 void spi_test_init()
 {
     SYSCTRL_ClearClkGateMulti((1 << SYSCTRL_ITEM_APB_SPI1)
@@ -473,21 +497,9 @@ void spi_test_init()
                              |(1 << SYSCTRL_ITEM_APB_PinCtrl));
     
     spi_config();
+    dma_config();
     
-#ifdef CASE_SPI_SEND_USE_DMA
-    SYSCTRL_ClearClkGateMulti(1 << SYSCTRL_ClkGate_APB_DMA);
-    DMA_Reset(1);
-    DMA_Reset(0);
-#endif
-}
-
-void spi_set_data_size(uint8_t dataSize)
-{
-    apSSP_SetTransferFormat(APB_SSP1, (dataSize - 1), bsSPI_TRANSFMT_DATALEN, bwSPI_TRANSFMT_DATALEN);
-}
-void spi_set_trans_cnt(uint8_t transCnt)
-{
-    apSSP_SetTransferControlWrTranCnt(APB_SSP1, transCnt);
+    spi_dma_context.sem_over = xSemaphoreCreateBinary();
 }
 
 void peripherals_spi_dma_to_txfifo(int channel_id, void *src, int size)
@@ -504,123 +516,54 @@ void peripherals_spi_send_data(uint8_t *data, int size)
     apSSP_SetTxDmaEn(APB_SSP1,1);
     peripherals_spi_dma_to_txfifo(SPI_DMA_TX_CHANNEL, data, size);
 
-    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);//trigger transfer
-    while(apSSP_GetSPIActiveStatus(APB_SSP1));
-
-    apSSP_SetTxDmaEn(APB_SSP1,0);
-}
-
-void peripherals_spi_send_data_32(uint32_t *data, int size)
-{
-    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);
-    
-    for (uint8_t i = 0; i < size; ++i)
-        apSSP_WriteFIFO(APB_SSP1, data[i]);
-    
-    while(apSSP_GetSPIActiveStatus(APB_SSP1));
-}
-void peripherals_spi_send_data_16(uint16_t *data, int size)
-{   
-    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);
-    
-    for (uint8_t i = 0; i < size; ++i)
-        apSSP_WriteFIFO(APB_SSP1, data[i]);
-    
-    while(apSSP_GetSPIActiveStatus(APB_SSP1));
-}
-void peripherals_spi_send_data_8(uint8_t *data, int size)
-{   
-    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);
-    
-    for (uint8_t i = 0; i < size; ++i)
-        apSSP_WriteFIFO(APB_SSP1, data[i]);
-    
-    while(apSSP_GetSPIActiveStatus(APB_SSP1));
+    apSSP_WriteCmd(APB_SSP1, 0x00, 0x00);   //trigger transfer
 }
 
 /*************************************************************
  * 
- * @brief SPI sends data of any length
+ * @brief   SPI sends data of any length using DMA
+ *          blocking function
  * 
  * @Param[in]   data    data pointer
  * @Param[in]   size    data size
  * 
  */
-void spi_send_data(uint8_t *data, uint16_t size)
+void spi_send_data_dma_sync(uint8_t *data, uint16_t size)
 {
-    uint16_t i = 0;
-    spi_set_trans_cnt(8);
     spi_set_data_size(8);
-    while (8 <= (size - i)) {
-        peripherals_spi_send_data_8(data + i, 8); i += 8;
-    }
+    spi_set_trans_cnt(DATA_LEN_CNT_MAX_FOR_SPI);
     
-    if (0 < (size - i)) {
-        spi_set_trans_cnt(size - i);
-        peripherals_spi_send_data_8(data + i, (size - i));
-    }
-}
-
-/*************************************************************
- * 
- * @brief SPI sends data of any length using DMA
- * 
- * @Param[in]   data    data pointer
- * @Param[in]   size    data size
- * 
- */
-void spi_send_data_dma(uint8_t *data, uint16_t size)
-{
-    uint16_t i = 0;
-    spi_set_trans_cnt(8);
-    spi_set_data_size(8);
+    if (size > DATA_LEN_CNT_MAX_FOR_SPI)
+        spi_dma_context.data_cnt = size - DATA_LEN_CNT_MAX_FOR_SPI;
+    else
+        spi_dma_context.data_cnt = 0;
     
-    while (8 <= (size - i)) {
-        peripherals_spi_send_data(data + i, 8); i += 8;
-    }
+    peripherals_spi_send_data(data, size);
     
-    if (0 < (size - i)) {
-        spi_set_trans_cnt((size - i));
-        peripherals_spi_send_data(data + i, (size - i));
+    BaseType_t r = xSemaphoreTake(spi_dma_context.sem_over,  portMAX_DELAY);
+    if (r != pdTRUE)
+    {
+        // exception!
     }
 }
 
 void spi_test_timer_task(TimerHandle_t xTimer)
 {
-    static const uint8_t data[] = {
-        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef,
-//        0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 
-    };  // size 119
+    static uint8_t data[10000] = {0};
+    for (uint16_t i = 0; i < 10000; ++i)
+        data[i] = i;
     
-#ifdef CASE_SPI_NORMAL_MASTER
-    // normal
-    //spi_send_data((uint8_t *)data, sizeof(data));
-    
-    // with DMA
-    spi_send_data_dma((uint8_t *)data, sizeof(data));
-#else
-#endif
+    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
+    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
+    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
 }
 
 void spi_test()
 {
     TimerHandle_t handle = xTimerCreate("spi",               //pcTimerName
-                                        pdMS_TO_TICKS(1000),    //xTimerPeriodInTicks
-                                        pdTRUE,                 //uxAutoReload
-                                        NULL,                   //pvTimerID
+                                        pdMS_TO_TICKS(1000), //xTimerPeriodInTicks
+                                        pdFALSE,             //uxAutoReload
+                                        NULL,                //pvTimerID
                                         spi_test_timer_task);//pxCallbackFunction
     xTimerStart(handle, portMAX_DELAY);
 }
