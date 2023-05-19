@@ -1,3 +1,18 @@
+/* $(license) */
+
+/* 
+ * 916 Peripheral Developer Handbook:
+ *     https://ingchips.github.io/drafts/pg_ing916
+ * power saving：
+ *     https://ingchips.github.io/application-notes/pg_power_saving_en/ch-framework.html
+ * ING91680X datasheet:
+ *     https://vsite.xincache.cn/100085_2204195046/ING91680C_Datasheet_for_Ingchips_BLE5.3_SoC.pdf
+ * ING91682X datasheet:
+ *     https://vsite.xincache.cn/100085_2204195046/ING91682C_Datasheet_for_Ingchips_BLE5.3_SoC.pdf
+ * Cube
+ */
+
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -61,6 +76,22 @@ void config_uart(uint32_t freq, uint32_t baud)
 
 // GPIO
 #ifdef CASE_GPIO
+
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-gpio.html
+ *     datasheet
+ *
+ * 一般需要恢复PinCtrl和GPIO的时钟（即消除门控）
+ * 输出模式：
+ *     通过GIO_WriteValue(pin, 1或0) 来拉高或拉低电平
+ *     通过GIO_ReadOutputValue 读取当前电平
+ * 输入模式：
+ *     可配置中断，水平触发或边沿触发
+ *     通过GIO_ReadValue(pin) 读取当前电平
+ */
+ 
 uint32_t gpio_isr(void *user_data)
 {
     GIO_ClearAllIntStatus();  // 清除中断触发状态
@@ -80,9 +111,10 @@ void gpio_test_init()
     PINCTRL_SetPadMux(GIO_GPIO_3, IO_SOURCE_GPIO);
     GIO_SetDirection(GIO_GPIO_3, GIO_DIR_OUTPUT);
     
+    
     // GPIO4 input 上升沿触发中断
     PINCTRL_SetPadMux(GIO_GPIO_4, IO_SOURCE_GPIO);
-    PINCTRL_Pull(GIO_GPIO_4, PINCTRL_PULL_DOWN);
+    PINCTRL_Pull(GIO_GPIO_4, PINCTRL_PULL_DOWN);    //下拉
     GIO_SetDirection(GIO_GPIO_4, GIO_DIR_INPUT);
     GIO_ConfigIntSource(GIO_GPIO_4, GIO_INT_EN_LOGIC_HIGH_OR_RISING_EDGE, GIO_INT_EDGE);
     
@@ -115,10 +147,11 @@ void gpio_test_timer_task(TimerHandle_t xTimer)
 
 void gpio_test()
 {
+    // 1s周期的TimerTask
     TimerHandle_t handle = xTimerCreate("gpio",               //pcTimerName
-                                        pdMS_TO_TICKS(1000),    //xTimerPeriodInTicks
-                                        pdTRUE,                 //uxAutoReload
-                                        NULL,                   //pvTimerID
+                                        pdMS_TO_TICKS(1000),  //xTimerPeriodInTicks
+                                        pdTRUE,               //uxAutoReload
+                                        NULL,                 //pvTimerID
                                         gpio_test_timer_task);//pxCallbackFunction
     xTimerStart(handle, portMAX_DELAY);
 }
@@ -127,6 +160,24 @@ void gpio_test()
 // UART
 #ifdef CASE_UART
 
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-uart.html
+ *     datasheet
+ * 一般需要恢复PinCtrl和UART的时钟（即消除门控）
+ * 
+ * 通过UART_PORT->DataRead 从RX_FIFO中读出数据
+ * 通过UART_SendData(UART_PORT, c); 把数据写入TX_FIFO
+ * 
+ * 下面的代码演示 
+ * UART1初始化
+ * UART1接收的数据从UART0发送出去
+ * UART1每秒发送26个字母(timer task)
+ *
+ * DMA: TODO
+ * 
+ */
 #define UART_PORT      APB_UART1
 
 #define USER_UART_IO_TX 9
@@ -153,7 +204,7 @@ void uart_test_config_uart(uint32_t freq, uint32_t baud)
     config.ClockFrequency    = freq;
     config.BaudRate          = baud;
 
-    apUART_Initialize(UART_PORT, &config, 1 << bsUART_RECEIVE_INTENAB);
+    apUART_Initialize(UART_PORT, &config, (1 << bsUART_RECEIVE_INTENAB));   //初始化并使能接收中断
 }
 
 uint32_t uart_isr(void *user_data)
@@ -162,14 +213,14 @@ uint32_t uart_isr(void *user_data)
 
     while(1)
     {
-        status = apUART_Get_all_raw_int_stat(UART_PORT);
+        status = apUART_Get_all_raw_int_stat(UART_PORT);    // 获取中断状态
         if (status == 0)
             break;
 
-        UART_PORT->IntClear = status;
+        UART_PORT->IntClear = status;                       // 清除中断状态
 
         // rx int
-        if (status & (1 << bsUART_RECEIVE_INTENAB))
+        if (status & (1 << bsUART_RECEIVE_INTENAB))         // 判断中断为接收中断
         {
             while (apUART_Check_RXFIFO_EMPTY(UART_PORT) != 1)
             {
@@ -191,11 +242,13 @@ void uart_test_init()
     PINCTRL_SetPadMux(USER_UART_IO_TX, IO_SOURCE_UART1_TXD);
     PINCTRL_SetPadMux(USER_UART_IO_RTS, IO_SOURCE_UART1_RTS);
     
+    // RX 上拉
     PINCTRL_Pull(USER_UART_IO_RX, PINCTRL_PULL_UP);
     PINCTRL_SelUartRxdIn(UART_PORT_1, USER_UART_IO_RX);
     
     PINCTRL_Pull(USER_UART_IO_CTS, PINCTRL_PULL_DOWN);
     PINCTRL_SelUartCtsIn(UART_PORT_1, USER_UART_IO_CTS);
+    
     
     uart_test_config_uart(OSC_CLK_FREQ, 115200);
     
@@ -215,9 +268,9 @@ void uart_test_timer_task(TimerHandle_t xTimer)
 void uart_test()
 {
     TimerHandle_t handle = xTimerCreate("uart",               //pcTimerName
-                                        pdMS_TO_TICKS(1000),    //xTimerPeriodInTicks
-                                        pdTRUE,                 //uxAutoReload
-                                        NULL,                   //pvTimerID
+                                        pdMS_TO_TICKS(1000),  //xTimerPeriodInTicks
+                                        pdTRUE,               //uxAutoReload
+                                        NULL,                 //pvTimerID
                                         uart_test_timer_task);//pxCallbackFunction
     xTimerStart(handle, portMAX_DELAY);
 }
@@ -227,6 +280,23 @@ void uart_test()
 
 // PWM
 #ifdef CASE_PWM
+
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pwm.html
+ *     datasheet
+ * 一般需要恢复PinCtrl和PWM的时钟（即消除门控）
+ * 
+ * 利用PWM_SetupSimple函数配置指定频率和占空比的PWM波形
+ * 
+ * 利用硬件Timer实现更多路的PWN输出
+ *
+ * 注意：由于GPIO不是全映射，某些IO口不能用在某些外设接口上，所以需查阅IO映射表，可以从datasheet中查看
+ * 例如：ING9182C中：
+ *     pwm_0a: 0,2,4,6,8,10,12,14,16,21,31,35  可用
+ *     pwm_0b: 1,3,5,7,9,11,13,15,17,22        可用
+ */
 
 //#define CASE_PWM_MAX_OUTPUT             // 利用Timer完成9路独立PWM输出
 #define CASE_PWM_COMPLEMENT_OUTPUT      // 互补输出
@@ -329,6 +399,19 @@ void pwm_test()
 // ADC
 #ifdef CASE_ADC
 
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-adc.html
+ *     datasheet
+ * ADC量程等信息需要在datasheet中查看
+ * 
+ * (1) 单次校准模式，单端输入
+ * (2) TODO 单次校准模式，差分输入
+ * (3) TODO 单次转换模式
+ * (4) TODO 循环校准模式，单端输入
+ */
+
 #define SAMPLERATE  100
 #define ADC_CH_NUM  1
 #define ADC_CLK_MHZ 6
@@ -386,9 +469,16 @@ void adc_test()
 #ifdef CASE_SPI
 
 /* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-sysctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-spi.html
+ *     datasheet
+ *
  * (1) normal SPI. TODO
  * (2) SPI DMA.
  * (3) high speed SPI (clock frequnce > 20Mbps).
+ *     need to use SYSCtrl to switch spi clock source first
  * 
  */
  
@@ -627,6 +717,20 @@ void spi_test()
 // EFLASH
 #ifdef CASE_EFLASH
 
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-eflash.html
+ *     https://ingchips.github.io/application-notes/pg_ble_stack_cn/ch-misc.html#键值存储
+ *     https://ingchips.github.io/application-notes/pg_ble_stack_cn/ch-misc.html#ch98-le-dev-db
+ *     datasheet
+ * 
+ * API:
+ * program_flash
+ * erase_flash_sector
+ * write_flash
+ * 
+ */
+
 // EFLASH_SECTOR_SIZE = 0x1000
 #define CASE_EFLASH_LOAD_ADDR 0x2141000
 #define CASE_EFLASH_AUTO_ERASE true
@@ -714,6 +818,11 @@ void eflash_test()
 // RTC
 #ifdef CASE_RTC
 
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-rtc.html
+ *     datasheet
+ */
 typedef struct
 {
     uint8_t hour;
@@ -773,6 +882,11 @@ void rtc_test()
 // TIMER
 #ifdef CASE_TIMER
 
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-timer.html
+ *     datasheet
+ */
 
 #define TMR_CLK_EXTERNAL_FREQ   6000000
 #define TMR_CLK_APB_FREQ        112000000
@@ -781,7 +895,7 @@ uint32_t tmr_100us_cnt = 0;
 uint32_t tmr_50ms_cnt = 0;
 uint32_t tmr_20ms_cnt = 0;
 
-uint32_t timer_case_irq_cb(void *user_data)
+uint32_t timer0_irq_cb(void *user_data)
 {
     // TMR0 channel 0 每100us触发 计数加1
     uint8_t stat = TMR_IntHappened(APB_TMR0, 0);
@@ -792,7 +906,22 @@ uint32_t timer_case_irq_cb(void *user_data)
         tmr_100us_cnt++;
     }
     
-    stat = TMR_IntHappened(APB_TMR1, 0);
+    // TMR0 channel 1 每1s触发 打印计数并清零
+    stat = TMR_IntHappened(APB_TMR0, 1);
+    if (stat & 0x01)
+    {
+        TMR_IntClr(APB_TMR0, 1, 0x01);
+        
+        platform_printf("100us:%d 50ms:%d, 20ms:%d", tmr_100us_cnt, tmr_50ms_cnt, tmr_20ms_cnt);
+        tmr_100us_cnt = tmr_50ms_cnt = tmr_20ms_cnt = 0;
+    }
+    
+    return 0;
+}
+
+uint32_t timer1_irq_cb(void *user_data)
+{
+    uint8_t stat = TMR_IntHappened(APB_TMR1, 0);
     if (stat != 0)
     {
         // TMR1 channel 0 16bit timer0  每50ms触发计数加1
@@ -810,17 +939,6 @@ uint32_t timer_case_irq_cb(void *user_data)
             tmr_20ms_cnt++;
         }
     }
-    
-    // TMR0 channel 1 每1s触发 打印计数并清零
-    stat = TMR_IntHappened(APB_TMR0, 1);
-    if (stat & 0x01)
-    {
-        TMR_IntClr(APB_TMR0, 1, 0x01);
-        
-        platform_printf("100us:%d 50ms:%d, 20ms:%d", tmr_100us_cnt, tmr_50ms_cnt, tmr_20ms_cnt);
-        tmr_100us_cnt = tmr_50ms_cnt = tmr_20ms_cnt = 0;
-    }
-    
     return 0;
 }
 
@@ -867,7 +985,8 @@ void timer_test_init()
         platform_printf("%d\n", (tmr1_channel_0_timer0_cmp << 16) | tmr1_channel_0_timer1_cmp);
     }
     
-    platform_set_irq_callback(PLATFORM_CB_IRQ_TIMER0, timer_case_irq_cb, NULL);
+    platform_set_irq_callback(PLATFORM_CB_IRQ_TIMER0, timer0_irq_cb, NULL);
+    platform_set_irq_callback(PLATFORM_CB_IRQ_TIMER1, timer1_irq_cb, NULL);
 }
 
 void timer_test()
@@ -880,6 +999,12 @@ void timer_test()
 
 // Watch Dog
 #ifdef CASE_WDT
+
+/* 
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-watchdog.html
+ *     datasheet
+ */
 uint32_t wdt_test_irq_cb(void *user_data)
 {
     TMR_WatchDogClearInt();
@@ -917,8 +1042,12 @@ void wdt_test()
 
 // I2C
 #ifdef CASE_I2C
-
 /*
+ * more detail：
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-pinctrl.html
+ *     https://ingchips.github.io/drafts/pg_ing916/ch-iic.html
+ *     datasheet
+ *
  * (1) master read slave data
  * (2) master send data to slave
  * (3) master read slave data with dma
