@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# 
+/peripherals_case/listing/
+/peripherals_case/output/
+/peripherals_case/RTE/
