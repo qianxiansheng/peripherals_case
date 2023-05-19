@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>../../bundles/typical/inc;../../bundles/typical/inc/os;../../src/BSP;../../src/FWlib;../../src/StartUP/ing916;../../src/Tools;../../src</IncludePath>
+              <IncludePath>../sdk/bundles/typical/inc;../sdk/bundles/typical/inc/os;../sdk/src/BSP;../sdk/src/FWlib;../sdk/src/StartUP/ing916;../sdk/src/Tools;../sdk/src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -401,7 +401,7 @@
             <File>
               <FileName>symdefs.m</FileName>
               <FileType>3</FileType>
-              <FilePath>../..\bundles\typical\ING9168xx\symdefs.m</FilePath>
+              <FilePath>..\sdk\bundles\typical\ING9168xx\symdefs.m</FilePath>
             </File>
           </Files>
         </Group>
@@ -411,12 +411,12 @@
             <File>
               <FileName>eflash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\BSP\eflash.c</FilePath>
+              <FilePath>..\sdk\src\BSP\eflash.c</FilePath>
             </File>
             <File>
               <FileName>iic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\BSP\iic.c</FilePath>
+              <FilePath>..\sdk\src\BSP\iic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -426,102 +426,102 @@
             <File>
               <FileName>peripheral_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_adc.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_adc.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_gpio.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_gpio.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_i2c.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_i2c.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_pinctrl.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_pinctrl.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_pinctrl.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_pwm.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_pwm.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_rtc.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_rtc.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_ssp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_ssp.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_ssp.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_sysctrl.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_sysctrl.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_sysctrl.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_timer.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_timer.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_uart.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_uart.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_comparator.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_comparator.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_comparator.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_dma.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_dma.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_efuse.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_efuse.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_efuse.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_i2s.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_i2s.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_i2s.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_ir.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_ir.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_ir.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_keyscan.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_keyscan.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_keyscan.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_pdm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_pdm.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_pdm.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_pte.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_pte.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_pte.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_qdec.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_qdec.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_qdec.c</FilePath>
             </File>
             <File>
               <FileName>peripheral_usb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../..\src\FWlib\peripheral_usb.c</FilePath>
+              <FilePath>../sdk\src\FWlib\peripheral_usb.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -239,7 +239,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\bundles\typical\ING9168xx\symdefs.m</PathWithFileName>
+      <PathWithFileName>..\sdk\bundles\typical\ING9168xx\symdefs.m</PathWithFileName>
       <FilenameWithoutPath>symdefs.m</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -259,7 +259,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\BSP\eflash.c</PathWithFileName>
+      <PathWithFileName>..\sdk\src\BSP\eflash.c</PathWithFileName>
       <FilenameWithoutPath>eflash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -271,7 +271,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\BSP\iic.c</PathWithFileName>
+      <PathWithFileName>..\sdk\src\BSP\iic.c</PathWithFileName>
       <FilenameWithoutPath>iic.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -291,7 +291,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_adc.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_adc.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -303,7 +303,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_gpio.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_gpio.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -315,7 +315,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_i2c.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_i2c.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_i2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -327,7 +327,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_pinctrl.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_pinctrl.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_pinctrl.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -339,7 +339,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_pwm.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_pwm.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -351,7 +351,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_rtc.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_rtc.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -363,7 +363,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_ssp.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_ssp.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_ssp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -375,7 +375,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_sysctrl.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_sysctrl.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_sysctrl.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -387,7 +387,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_timer.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_timer.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -399,7 +399,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_uart.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_uart.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -411,7 +411,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_comparator.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_comparator.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_comparator.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -423,7 +423,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_dma.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_dma.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -435,7 +435,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_efuse.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_efuse.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_efuse.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -447,7 +447,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_i2s.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_i2s.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_i2s.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -459,7 +459,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_ir.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_ir.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_ir.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -471,7 +471,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_keyscan.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_keyscan.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_keyscan.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -483,7 +483,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_pdm.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_pdm.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_pdm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -495,7 +495,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_pte.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_pte.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_pte.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -507,7 +507,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_qdec.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_qdec.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_qdec.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -519,7 +519,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../..\src\FWlib\peripheral_usb.c</PathWithFileName>
+      <PathWithFileName>../sdk\src\FWlib\peripheral_usb.c</PathWithFileName>
       <FilenameWithoutPath>peripheral_usb.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

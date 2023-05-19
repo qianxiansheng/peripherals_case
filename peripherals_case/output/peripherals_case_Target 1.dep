@@ -1,702 +1,704 @@
 Dependencies for Project 'peripherals_case', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6160000::V6.16::ARMCLANG
-F (.\src\main.c)(0x6465C46C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/main.o -MD)
+F (.\src\main.c)(0x6466EB88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/main.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-I (..\..\bundles\typical\inc\platform_api.h)(0x643D0982)
+I (..\sdk\bundles\typical\inc\platform_api.h)(0x643D0982)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-I (..\..\bundles\typical\inc\ll_api.h)(0x6438F1C0)
-I (..\..\bundles\typical\inc\os\FreeRTOS.h)(0x6260C5CA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+I (..\sdk\bundles\typical\inc\ll_api.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\FreeRTOS.h)(0x6260C5CA)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x603507D0)
-I (..\..\bundles\typical\inc\os\FreeRTOSConfig.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\projdefs.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\portable.h)(0x6438F1C0)
-I (..\..\bundles\typical\inc\os\deprecated_definitions.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\portmacro.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\.\portable\GCC\ARM_CM3\portmacro.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\mpu_wrappers.h)(0x6260C5CA)
-I (..\..\bundles\typical\inc\os\task.h)(0x6438F1C0)
-I (..\..\bundles\typical\inc\os\list.h)(0x6438F1C0)
-I (..\..\bundles\typical\inc\os\timers.h)(0x6438F1C0)
-I (..\..\src\BSP\eflash.h)(0x6461B9AA)
-I (..\..\src\BSP\iic.h)(0x6260C5CC)
+I (..\sdk\bundles\typical\inc\os\FreeRTOSConfig.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\projdefs.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\portable.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\deprecated_definitions.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\portmacro.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\.\portable\GCC\ARM_CM3\portmacro.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\mpu_wrappers.h)(0x6260C5CA)
+I (..\sdk\bundles\typical\inc\os\task.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\list.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\timers.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\semphr.h)(0x6438F1C0)
+I (..\sdk\bundles\typical\inc\os\queue.h)(0x6438F1C0)
+I (..\sdk\src\BSP\eflash.h)(0x6461B9AA)
+I (..\sdk\src\BSP\iic.h)(0x6260C5CC)
 F (.\src\startup_ing91600.s)(0x645C8E9D)(--cpu Cortex-M4.fp.sp -g --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-IC:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 536"--pd "_RTE_ SETA 1"--pd "_RTE_ SETA 1"--list .\listing\startup_ing91600.lst--xref -o .\output\startup_ing91600.o--depend .\output\startup_ing91600.d)
-F (../..\bundles\typical\ING9168xx\symdefs.m)(0x645B2DD3)()
-F (..\..\src\BSP\eflash.c)(0x64142566)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/eflash.o -MD)
+F (..\sdk\bundles\typical\ING9168xx\symdefs.m)(0x645B2DD3)()
+F (..\sdk\src\BSP\eflash.c)(0x64142566)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/eflash.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-I (..\..\src\BSP\eflash.h)(0x6461B9AA)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\BSP\eflash.h)(0x6461B9AA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-I (..\..\src\Tools\rom_tools.h)(0x63B5200E)
-F (..\..\src\BSP\iic.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/iic.o -MD)
-I (..\..\src\BSP\iic.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+I (..\sdk\src\Tools\rom_tools.h)(0x63B5200E)
+F (..\sdk\src\BSP\iic.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/iic.o -MD)
+I (..\sdk\src\BSP\iic.h)(0x6260C5CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-F (../..\src\FWlib\peripheral_adc.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_adc.o -MD)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
+F (../sdk\src\FWlib\peripheral_adc.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_adc.o -MD)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-I (..\..\bundles\typical\inc\platform_api.h)(0x643D0982)
-I (..\..\bundles\typical\inc\ll_api.h)(0x6438F1C0)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+I (..\sdk\bundles\typical\inc\platform_api.h)(0x643D0982)
+I (..\sdk\bundles\typical\inc\ll_api.h)(0x6438F1C0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-I (..\..\src\BSP\eflash.h)(0x6461B9AA)
-F (../..\src\FWlib\peripheral_gpio.c)(0x63E61B7E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_gpio.o -MD)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\BSP\eflash.h)(0x6461B9AA)
+F (../sdk\src\FWlib\peripheral_gpio.c)(0x63E61B7E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_gpio.o -MD)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_i2c.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2c.o -MD)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_i2c.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2c.o -MD)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_pinctrl.c)(0x63B91DD0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pinctrl.o -MD)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_pinctrl.c)(0x63B91DD0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pinctrl.o -MD)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_pwm.c)(0x6437AA30)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pwm.o -MD)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_pwm.c)(0x6437AA30)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pwm.o -MD)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_rtc.c)(0x64195EB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_rtc.o -MD)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_ssp.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ssp.o -MD)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_rtc.c)(0x64195EB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_rtc.o -MD)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_sysctrl.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_sysctrl.o -MD)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_ssp.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ssp.o -MD)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_timer.c)(0x6423DC56)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_timer.o -MD)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_sysctrl.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_sysctrl.o -MD)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_uart.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_uart.o -MD)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_timer.c)(0x6423DC56)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_timer.o -MD)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_comparator.c)(0x63EDDF2C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_comparator.o -MD)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_uart.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_uart.o -MD)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_dma.c)(0x6465A3CE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_dma.o -MD)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_comparator.c)(0x63EDDF2C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_comparator.o -MD)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_efuse.c)(0x63E22306)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_efuse.o -MD)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_dma.c)(0x6465A3CE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_dma.o -MD)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_i2s.c)(0x63BE5620)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2s.o -MD)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_ir.c)(0x63805914)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ir.o -MD)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_efuse.c)(0x63E22306)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_efuse.o -MD)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_keyscan.c)(0x63EDDF2C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_keyscan.o -MD)
-I (..\..\src\FWlib\peripheral_keyscan.h)(0x63EDDF2C)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_i2s.c)(0x63BE5620)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2s.o -MD)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_ir.c)(0x63805914)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ir.o -MD)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_pdm.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pdm.o -MD)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
-I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_pte.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pte.o -MD)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_keyscan.c)(0x63EDDF2C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_keyscan.o -MD)
+I (..\sdk\src\FWlib\peripheral_keyscan.h)(0x63EDDF2C)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_qdec.c)(0x63EB56FA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_qdec.o -MD)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_pdm.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pdm.o -MD)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
-F (../..\src\FWlib\peripheral_usb.c)(0x6437AA30)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../bundles/typical/inc -I ../../bundles/typical/inc/os -I ../../src/BSP -I ../../src/FWlib -I ../../src/StartUP/ing916 -I ../../src/Tools -I ../../src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_usb.o -MD)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_pte.c)(0x643D088A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pte.o -MD)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_qdec.c)(0x63EB56FA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_qdec.o -MD)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)
+F (../sdk\src\FWlib\peripheral_usb.c)(0x6437AA30)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../sdk/bundles/typical/inc -I ../sdk/bundles/typical/inc/os -I ../sdk/src/BSP -I ../sdk/src/FWlib -I ../sdk/src/StartUP/ing916 -I ../sdk/src/Tools -I ../sdk/src-I./RTE/_Target_1-IC:/Users/leosh/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_usb.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
-I (..\..\src\StartUP\ing916\ingsoc.h)(0x641814BA)
+I (..\sdk\src\StartUP\ing916\ingsoc.h)(0x641814BA)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
 I (C:\Users\leosh\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
-I (..\..\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
-I (..\..\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
-I (..\..\src\FWlib\peripheral_adc.h)(0x6414207C)
-I (..\..\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
-I (..\..\src\FWlib\peripheral_dma.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
-I (..\..\src\FWlib\peripheral_efuse.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_gpio.h)(0x64409704)
-I (..\..\src\FWlib\peripheral_i2c.h)(0x634CBB80)
-I (..\..\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
-I (..\..\src\FWlib\peripheral_ir.h)(0x63805914)
-I (..\..\src\FWlib\peripheral_pdm.h)(0x63A406D2)
-I (..\..\src\FWlib\peripheral_pte.h)(0x643D088A)
-I (..\..\src\FWlib\peripheral_pwm.h)(0x6437AA30)
-I (..\..\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
-I (..\..\src\FWlib\peripheral_rtc.h)(0x64195EB0)
-I (..\..\src\FWlib\peripheral_ssp.h)(0x63E22306)
-I (..\..\src\FWlib\peripheral_timer.h)(0x6423DC56)
+I (..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63B90654)
+I (..\sdk\src\FWlib\peripheral_adc.h)(0x6414207C)
+I (..\sdk\src\FWlib\peripheral_comparator.h)(0x63EDDF2C)
+I (..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_sysctrl.h)(0x645E154B)
+I (..\sdk\src\FWlib\peripheral_efuse.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_gpio.h)(0x64409704)
+I (..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\sdk\src\FWlib\peripheral_pte.h)(0x643D088A)
+I (..\sdk\src\FWlib\peripheral_pwm.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_qdec.h)(0x63EB56FA)
+I (..\sdk\src\FWlib\peripheral_rtc.h)(0x64195EB0)
+I (..\sdk\src\FWlib\peripheral_ssp.h)(0x63E22306)
+I (..\sdk\src\FWlib\peripheral_timer.h)(0x6423DC56)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
-I (..\..\src\FWlib\peripheral_uart.h)(0x6260C5CC)
-I (..\..\src\FWlib\peripheral_usb.h)(0x6437AA30)
+I (..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\sdk\src\FWlib\peripheral_usb.h)(0x6437AA30)

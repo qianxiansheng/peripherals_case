@@ -1,7 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 ".\output\main.o"
 ".\output\startup_ing91600.o"
-"../..\bundles\typical\ING9168xx\symdefs.m"
+"..\sdk\bundles\typical\ING9168xx\symdefs.m"
 ".\output\eflash.o"
 ".\output\iic.o"
 ".\output\peripheral_adc.o"
