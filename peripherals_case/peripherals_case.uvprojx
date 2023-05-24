@@ -388,6 +388,61 @@
               <FileType>1</FileType>
               <FilePath>.\src\main.c</FilePath>
             </File>
+            <File>
+              <FileName>case_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_eflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_eflash.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_iic.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>case_wdt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\case_wdt.c</FilePath>
+            </File>
+            <File>
+              <FileName>pch.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\pch.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
