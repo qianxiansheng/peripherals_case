@@ -20,7 +20,7 @@
 #include "case_pwm.h"
 
 // PWM
-#ifdef CASE_PWM
+#if CASE_PWM
 //#define CASE_PWM_MAX_OUTPUT             // 利用Timer完成9路独立PWM输出
 #define CASE_PWM_COMPLEMENT_OUTPUT      // 互补输出
 

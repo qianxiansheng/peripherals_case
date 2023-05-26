@@ -12,54 +12,54 @@
 #include "task.h"
 #include "timers.h"
 
-//#define CASE_GPIO
-//#define CASE_UART
-//#define CASE_PWM
-//#define CASE_EFLASH
-//#define CASE_ADC
-//#define CASE_SPI
-//#define CASE_RTC
-#define CASE_TIMER
-#define CASE_WDT
-//#define CASE_I2C
+#define CASE_GPIO   0
+#define CASE_UART   0
+#define CASE_PWM    0
+#define CASE_EFLASH 0
+#define CASE_ADC    0
+#define CASE_SPI    1
+#define CASE_RTC    0
+#define CASE_TIMER  0
+#define CASE_WDT    1
+#define CASE_I2C    0
 
-#ifdef CASE_ADC
+#if CASE_ADC
 #include "case_adc.h"
 #endif
 
-#ifdef CASE_EFLASH
+#if CASE_EFLASH
 #include "case_eflash.h"
 #endif
 
-#ifdef CASE_GPIO
+#if CASE_GPIO
 #include "case_gpio.h"
 #endif
 
-#ifdef CASE_I2C
+#if CASE_I2C
 #include "case_iic.h"
 #endif
 
-#ifdef CASE_PWM
+#if CASE_PWM
 #include "case_pwm.h"
 #endif
 
-#ifdef CASE_RTC
+#if CASE_RTC
 #include "case_rtc.h"
 #endif
 
-#ifdef CASE_SPI
+#if CASE_SPI
 #include "case_spi.h"
 #endif
 
-#ifdef CASE_TIMER
+#if CASE_TIMER
 #include "case_timer.h"
 #endif
 
-#ifdef CASE_UART
+#if CASE_UART
 #include "case_uart.h"
 #endif
 
-#ifdef CASE_WDT
+#if CASE_WDT
 #include "case_wdt.h"
 #endif
 

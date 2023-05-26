@@ -10,7 +10,7 @@
 #include "case_rtc.h"
  
 // RTC
-#ifdef CASE_RTC
+#if CASE_RTC
 typedef struct
 {
     uint8_t hour;

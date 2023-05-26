@@ -16,7 +16,7 @@
 #include "case_adc.h"
 
 // ADC
-#ifdef CASE_ADC
+#if CASE_ADC
 
 #define SAMPLERATE  100
 #define ADC_CH_NUM  1

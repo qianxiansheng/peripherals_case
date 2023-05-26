@@ -60,52 +60,52 @@ void setup_peripherals(void)
     config_uart(OSC_CLK_FREQ, 115200);
     
     // GPIO
-#ifdef CASE_GPIO
+#if CASE_GPIO
     gpio_test_init();
 #endif
     
     // UART
-#ifdef CASE_UART
+#if CASE_UART
     uart_test_init();
 #endif
     
     // PWM
-#ifdef CASE_PWM
+#if CASE_PWM
     pwm_test_init();
 #endif
     
     // ADC
-#ifdef CASE_ADC
+#if CASE_ADC
     adc_test_init();
 #endif
     
     // SPI
-#ifdef CASE_SPI
+#if CASE_SPI
     spi_test_init();
 #endif
 
     // EFLASH
-#ifdef CASE_EFLASH
+#if CASE_EFLASH
     eflash_test_init();
 #endif
 
     // RTC
-#ifdef CASE_RTC
+#if CASE_RTC
     rtc_test_init();
 #endif
     
     // TIMER
-#ifdef CASE_TIMER
+#if CASE_TIMER
     timer_test_init();
 #endif
 
     // Watch Dog
-#ifdef CASE_WDT
+#if CASE_WDT
     wdt_test_init();
 #endif
     
     // I2C
-#ifdef CASE_I2C
+#if CASE_I2C
     i2c_test_init();
 #endif
     
@@ -115,52 +115,52 @@ uint32_t setup_profile(void *data, void *user_data)
 {
     platform_printf("setup profile\n");
     // GPIO
-#ifdef CASE_GPIO
+#if CASE_GPIO
     gpio_test();
 #endif
     
     // UART
-#ifdef CASE_UART
+#if CASE_UART
     uart_test();
 #endif
     
     // PWM
-#ifdef CASE_PWM
+#if CASE_PWM
     pwm_test();
 #endif
     
     // ADC
-#ifdef CASE_ADC
+#if CASE_ADC
     adc_test();
 #endif
     
     // SPI
-#ifdef CASE_SPI
+#if CASE_SPI
     spi_test();
 #endif
 
     // EFLASH
-#ifdef CASE_EFLASH
+#if CASE_EFLASH
     eflash_test();
 #endif
 
     // RTC
-#ifdef CASE_RTC
+#if CASE_RTC
     rtc_test();
 #endif
     
     // TIMER
-#ifdef CASE_TIMER
+#if CASE_TIMER
     timer_test();
 #endif
 
     // Watch Dog
-#ifdef CASE_WDT
+#if CASE_WDT
     wdt_test();
 #endif
 
     // I2C
-#ifdef CASE_I2C
+#if CASE_I2C
     i2c_test();
 #endif
     return 0;
@@ -175,7 +175,7 @@ int app_main()
     
     platform_set_evt_callback(PLATFORM_CB_EVT_PUTC, (f_platform_evt_cb)cb_putc, NULL);
 
-#ifdef CASE_TIMER
+#if CASE_TIMER
     // SysTick 增强
     platform_config(PLATFORM_CFG_RTOS_ENH_TICK, PLATFORM_CFG_ENABLE);
 #endif

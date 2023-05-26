@@ -8,7 +8,7 @@
  
 #include "case_wdt.h"
 // Watch Dog
-#ifdef CASE_WDT
+#if CASE_WDT
 uint32_t wdt_test_irq_cb(void *user_data)
 {
     TMR_WatchDogClearInt();

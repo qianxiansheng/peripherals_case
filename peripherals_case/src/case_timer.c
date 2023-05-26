@@ -9,7 +9,7 @@
 #include "case_timer.h"
 
 // TIMER
-#ifdef CASE_TIMER
+#if CASE_TIMER
 
 #define TMR_CLK_EXTERNAL_FREQ   6000000
 #define TMR_CLK_APB_FREQ        112000000

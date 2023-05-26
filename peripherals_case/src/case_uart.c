@@ -21,7 +21,7 @@
  
 #include "case_uart.h"
 // UART
-#ifdef CASE_UART
+#if CASE_UART
 #define UART_PORT      APB_UART1
 
 #define USER_UART_IO_TX 9

@@ -18,14 +18,27 @@
 #include "case_gpio.h"
 
 // GPIO
-#ifdef CASE_GPIO
+#if CASE_GPIO
  
 uint32_t gpio_isr(void *user_data)
 {
+    
+    if (0 != GIO_GetIntStatus(GIO_GPIO_4))
+    {
+        platform_printf("GPIO4 %d\n", GIO_ReadValue(GIO_GPIO_4));
+    }
+    
+    if (0 != GIO_GetIntStatus(GIO_GPIO_5))
+    {
+        platform_printf("GPIO5 %d\n", GIO_ReadValue(GIO_GPIO_4));
+    }
+    
+    if (0 != GIO_GetIntStatus(GIO_GPIO_6))
+    {
+        platform_printf("6 \n");
+    }
+    
     GIO_ClearAllIntStatus();  // 清除中断触发状态
-    
-    platform_printf("-");
-    
     return 0;
 }
 

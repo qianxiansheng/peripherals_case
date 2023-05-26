@@ -19,7 +19,7 @@
 #include "semphr.h"
  
 // SPI
-#ifdef CASE_SPI
+#if CASE_SPI
  
 #define HIGH_SPEED
 #define USE_SPI0
@@ -223,23 +223,29 @@ void spi_send_data_dma_sync(uint8_t *data, uint16_t size)
     }
 }
 
+
+#define FLASH_START_ADDR 0x2041000
+#define PAGE_SIZE 0x1000
+uint8_t buffer[PAGE_SIZE] = { 0 };
+
 void spi_test_timer_task(TimerHandle_t xTimer)
 {
-    static uint8_t data[10000] = {0};
-    for (uint16_t i = 0; i < 10000; ++i)
-        data[i] = i;
+    uint32_t limit = 32768;
+    uint32_t offset = 0;
+    uint32_t transfer_size_this_time = 0;
     
-    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
-    
-    platform_printf("step1.\n");
-    
-    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
-    
-    platform_printf("step2.\n");
-    
-    spi_send_data_dma_sync((uint8_t *)data, sizeof(data));   // 10000
-    
-    platform_printf("step3.\n");
+    while (offset < limit)
+    {
+        transfer_size_this_time = limit - offset;        
+        if (transfer_size_this_time > PAGE_SIZE)
+            transfer_size_this_time = PAGE_SIZE;
+        
+        //memcpy(buffer, (uint8_t *)(FLASH_START_ADDR + offset), transfer_size_this_time);
+        
+        spi_send_data_dma_sync((uint8_t *)(FLASH_START_ADDR + offset), transfer_size_this_time);   // 10000
+        
+        offset += transfer_size_this_time;
+    }
 }
 
 void spi_test()

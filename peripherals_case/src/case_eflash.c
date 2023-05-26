@@ -18,7 +18,7 @@
 #include "eflash.h"
 
 // EFLASH
-#ifdef CASE_EFLASH
+#if CASE_EFLASH
 
 // EFLASH_SECTOR_SIZE = 0x1000
 #define CASE_EFLASH_LOAD_ADDR 0x2141000

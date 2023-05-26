@@ -17,7 +17,7 @@
 #include "iic.h"
  
 // I2C
-#ifdef CASE_I2C
+#if CASE_I2C
 //#define MASTER_SEND_TO_SLAVE
 //#define MASTER_READ_FROM_SLAVE
 //#define MASTER_SEND_TO_SLAVE_WITH_DMA
