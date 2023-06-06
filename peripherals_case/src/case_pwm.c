@@ -21,8 +21,8 @@
 
 // PWM
 #if CASE_PWM
-//#define CASE_PWM_MAX_OUTPUT             // 利用Timer完成9路独立PWM输出
-#define CASE_PWM_COMPLEMENT_OUTPUT      // 互补输出
+#define CASE_PWM_MAX_OUTPUT             // 利用Timer完成9路独立PWM输出
+//#define CASE_PWM_COMPLEMENT_OUTPUT      // 互补输出
 
 
 #define PIN_LED1_A GIO_GPIO_4
@@ -56,65 +56,67 @@ void pwm_test_init()
     PINCTRL_SetPadMux(PIN_LED1_A, IO_SOURCE_PWM0_A);
     PINCTRL_SetPadMux(PIN_LED5_B, IO_SOURCE_PWM0_B);
     PWM_SetupSimple(0, 100, 20);
-    PWM_Enable(0, 1);
 #endif
     
 #ifdef CASE_PWM_MAX_OUTPUT
     //配置PWM
     PINCTRL_SetPadMux(PIN_LED1_A, IO_SOURCE_PWM0_A);
-    PWM_SetupSimple(0, 100, 50);
-    PWM_Enable(0, 1);
+    PWM_SetupSimple(0, 100, 50);    //内部执行了PWM_Enable(channel_index, 1);
     
     PINCTRL_SetPadMux(PIN_LED2_A, IO_SOURCE_PWM1_A);
-    PWM_SetupSimple(1, 100, 20);
-    PWM_Enable(1, 1);
+    PWM_SetupSimple(1, 100, 20);    //内部执行了PWM_Enable(channel_index, 1);
     
     PINCTRL_SetPadMux(PIN_LED3_A, IO_SOURCE_PWM2_A);
-    PWM_SetupSimple(2, 100, 80);
-    PWM_Enable(2, 1);
+    PWM_SetupSimple(2, 100, 80);    //内部执行了PWM_Enable(channel_index, 1);
 
 
     //PWM Timer impl
     SYSCTRL_SelectTimerClk(TMR_PORT_1, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR1, 0, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR1, 0, 32000, 10, 50);
-    TMR_Enable         (APB_TMR1, 0, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED4_A, IO_SOURCE_TIMER1_PWM0_A);
     
     SYSCTRL_SelectTimerClk(TMR_PORT_1, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR1, 1, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR1, 1, 32000, 10, 10);
-    TMR_Enable         (APB_TMR1, 1, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED5_B, IO_SOURCE_TIMER1_PWM1_B);
     
     SYSCTRL_SelectTimerClk(TMR_PORT_2, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR2, 0, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR2, 0, 32000, 10, 20);
-    TMR_Enable         (APB_TMR2, 0, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED6_B, IO_SOURCE_TIMER2_PWM0_B);
     
     SYSCTRL_SelectTimerClk(TMR_PORT_2, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR2, 1, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR2, 1, 32000, 10, 30);
-    TMR_Enable         (APB_TMR2, 1, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED7_B, IO_SOURCE_TIMER2_PWM1_B);
     
     SYSCTRL_SelectTimerClk(TMR_PORT_0, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR0, 0, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR0, 0, 32000, 10, 40);
-    TMR_Enable         (APB_TMR0, 0, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED8_B, IO_SOURCE_TIMER0_PWM0_B);
     
     SYSCTRL_SelectTimerClk(TMR_PORT_0, SYSCTRL_CLK_32k);
     TMR_SetOpMode      (APB_TMR0, 1, TMR_CTL_OP_MODE_16BIT_PWM, TMR_CLK_MODE_EXTERNAL, 0);
     TMR_PWM_SetupSimple(APB_TMR0, 1, 32000, 10, 50);
-    TMR_Enable         (APB_TMR0, 1, (1 << 3));
     PINCTRL_SetPadMux(PIN_LED9_B, IO_SOURCE_TIMER0_PWM1_B);
 #endif
 }
 void pwm_test()
 {
-
+    vTaskDelay(pdMS_TO_TICKS(3000));
+    
+#ifdef CASE_PWM_COMPLEMENT_OUTPUT
+#endif
+    
+#ifdef CASE_PWM_MAX_OUTPUT
+    TMR_Enable(APB_TMR1, 0, (1 << 3));
+    TMR_Enable(APB_TMR1, 1, (1 << 3));
+    TMR_Enable(APB_TMR2, 0, (1 << 3));
+    TMR_Enable(APB_TMR2, 1, (1 << 3));
+    TMR_Enable(APB_TMR0, 0, (1 << 3));
+    TMR_Enable(APB_TMR0, 1, (1 << 3));
+#endif
 }
 
 #endif
